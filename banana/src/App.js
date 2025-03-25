@@ -5,6 +5,7 @@ import './index.css';
 import GameDashboard from './components/Game/GameDashboard';
 import GamePlay from './components/Game/GamePlay';
 import Scoreboard from './components/Game/Scoreboard'; // Import Scoreboard component
+import GameTutorial from './components/Game/GameTutorial'; // Import Scoreboard component
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('login'); // Set 'login' as default
@@ -19,6 +20,8 @@ const App = () => {
         return <GameDashboard onNavigate={setCurrentPage} />;
       case 'gameplay':
         return <GamePlay onNavigate={setCurrentPage} />;
+      case 'GameTutorial': // Add case for Scoreboard
+      return <GameTutorial onNavigate={setCurrentPage} />;
       case 'scoreboard': // Add case for Scoreboard
         return <Scoreboard onNavigate={setCurrentPage} />;
       default:
